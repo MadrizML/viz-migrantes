@@ -1,0 +1,346 @@
+/* =========================================================================
+   Las rutas de los que no llegaron — estilos
+   Diseño sobrio, alto ratio datos/tinta, paleta segura para daltonismo.
+   ========================================================================= */
+
+:root {
+  /* Paleta base */
+  --bg: #f7f5f2;
+  --bg-alt: #ffffff;
+  --ink: #1d1d1f;
+  --ink-soft: #4a4a4f;
+  --ink-faint: #8a8a90;
+  --line: #e2ddd6;
+  --accent: #b03a2e;        /* rojo terroso, para el foco narrativo */
+  --accent-soft: #d98880;
+
+  /* Paleta categórica de causas (Okabe-Ito, segura para daltonismo) */
+  --c-drown: #0072b2;       /* ahogamiento, azul */
+  --c-env: #e69f00;         /* ambiental, naranja */
+  --c-transport: #56b4e9;   /* transporte, celeste */
+  --c-violence: #d55e00;    /* violencia, bermellón */
+  --c-sickness: #009e73;    /* enfermedad, verde */
+  --c-accident: #cc79a7;    /* accidental, rosa */
+  --c-unknown: #999999;     /* desconocida, gris */
+
+  /* Paleta de subregiones (secuencial diferenciable) */
+  --s-north: #264653;
+  --s-central: #2a9d8f;
+  --s-south: #e9c46a;
+  --s-carib: #e76f51;
+
+  --maxw: 1100px;
+  --radius: 8px;
+  --shadow: 0 2px 14px rgba(0, 0, 0, 0.08);
+  --font: "Segoe UI", "Helvetica Neue", system-ui, -apple-system, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.6;
+  font-size: 17px;
+}
+
+h1, h2, h3 { line-height: 1.2; font-weight: 700; }
+
+a { color: var(--accent); }
+
+/* ---- Barra de progreso de lectura ---- */
+#progress-bar {
+  position: fixed;
+  top: 0; left: 0;
+  height: 4px;
+  width: 0%;
+  background: var(--accent);
+  z-index: 1000;
+  transition: width 0.1s linear;
+}
+
+/* ============================ PORTADA ============================ */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(160deg, #1d2a35 0%, #2c3e50 60%, #34495e 100%);
+  color: #f4f1ec;
+  padding: 4rem 1.5rem;
+}
+.hero-inner { max-width: 760px; }
+.kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.78rem;
+  color: var(--accent-soft);
+  margin: 0 0 1rem;
+}
+.hero h1 {
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  margin: 0 0 1rem;
+  letter-spacing: -0.02em;
+}
+.subtitle {
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  color: #d7d2ca;
+  margin: 0 0 2.5rem;
+  max-width: 38ch;
+}
+.hero-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+.stat { display: flex; flex-direction: column; }
+.stat-num {
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+  font-weight: 700;
+  color: #fff;
+  font-variant-numeric: tabular-nums;
+}
+.stat-label { font-size: 0.85rem; color: var(--ink-faint); color: #b9b4ac; }
+.hero-questions { border-left: 3px solid var(--accent); padding-left: 1.2rem; }
+.hero-questions .lead { font-weight: 600; margin: 0 0 0.6rem; }
+.hero-questions ol { margin: 0; padding-left: 1.2rem; color: #d7d2ca; }
+.hero-questions li { margin-bottom: 0.35rem; }
+.scroll-hint {
+  margin-top: 3rem;
+  color: var(--accent-soft);
+  font-size: 0.95rem;
+  animation: bob 2s ease-in-out infinite;
+}
+@keyframes bob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(8px); } }
+
+/* ============================ VISTAS ============================ */
+main { display: block; }
+
+.view {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 5rem 1.5rem;
+  border-bottom: 1px solid var(--line);
+}
+.view-intro { max-width: 720px; margin: 0 auto 2.5rem; }
+.view-intro h2 {
+  font-size: clamp(1.6rem, 4vw, 2.3rem);
+  margin: 0 0 1rem;
+  color: var(--ink);
+}
+.view-intro p { color: var(--ink-soft); margin: 0 0 1rem; }
+.view-intro .hint {
+  font-size: 0.9rem;
+  color: var(--ink-faint);
+  font-style: italic;
+}
+.view-intro .note {
+  font-size: 0.92rem;
+  background: #fbf3e8;
+  border-left: 3px solid var(--c-env);
+  padding: 0.8rem 1rem;
+  border-radius: 4px;
+  color: var(--ink-soft);
+}
+
+.view-stage { }
+
+/* Controles */
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem 1.2rem;
+  background: var(--bg-alt);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+.controls label {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+.controls input[type="range"] { accent-color: var(--accent); }
+.controls output { font-weight: 400; color: var(--ink-faint); min-width: 8ch; }
+.controls select {
+  font: inherit;
+  font-size: 0.9rem;
+  padding: 0.35rem 0.5rem;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--bg);
+}
+
+.btn-group { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+.btn-group button {
+  font: inherit;
+  font-size: 0.85rem;
+  padding: 0.45rem 0.9rem;
+  border: 1px solid var(--line);
+  background: var(--bg);
+  border-radius: 6px;
+  cursor: pointer;
+  color: var(--ink-soft);
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+.btn-group button:hover { border-color: var(--accent-soft); }
+.btn-group button.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+/* Leyenda */
+.legend { display: flex; flex-wrap: wrap; gap: 0.4rem 1rem; font-size: 0.82rem; }
+.legend .item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+  user-select: none;
+  color: var(--ink-soft);
+}
+.legend .item.dimmed { opacity: 0.35; }
+.legend .swatch {
+  width: 14px; height: 14px;
+  border-radius: 3px;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+/* Figuras y SVG */
+figure { margin: 0; }
+figure h3 {
+  font-size: 1.05rem;
+  margin: 0 0 0.6rem;
+  color: var(--ink);
+}
+svg { display: block; width: 100%; height: auto; }
+#map-svg { height: 560px; background: #eef3f6; border-radius: var(--radius); }
+#timeline-svg { height: 440px; }
+#sankey-svg { height: 600px; }
+#causes-svg { height: 320px; }
+#demo-svg { height: 280px; }
+figcaption {
+  font-size: 0.78rem;
+  color: var(--ink-faint);
+  margin-top: 0.7rem;
+  max-width: 65ch;
+}
+
+/* Perfil: causas a ancho completo, demografía en dos paneles debajo */
+.profile-causes { margin-bottom: 2.5rem; }
+.demo-heading {
+  font-size: 1.05rem;
+  margin: 0 0 1.2rem;
+  color: var(--ink);
+}
+.demo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+}
+.demo-grid figure h4 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 0 0 0.6rem;
+  color: var(--ink-soft);
+}
+#cover-svg { height: 280px; }
+@media (max-width: 760px) {
+  .demo-grid { grid-template-columns: 1fr; }
+}
+
+/* Sección de limitaciones */
+.limitations .view-intro { margin-bottom: 0; }
+.limits-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0;
+  display: grid;
+  gap: 1rem;
+}
+.limits-list li {
+  background: var(--bg-alt);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--ink-faint);
+  border-radius: 6px;
+  padding: 0.9rem 1.1rem;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+}
+.limits-list strong { color: var(--ink); }
+
+/* ============================ CIERRE ============================ */
+.closing {
+  background: #1d2a35;
+  color: #d7d2ca;
+  padding: 5rem 1.5rem;
+}
+.closing-inner { max-width: 720px; margin: 0 auto; }
+.closing h2 { color: #fff; margin: 0 0 1.2rem; }
+.closing p { margin: 0 0 1.2rem; }
+.closing .attribution { font-size: 0.85rem; color: var(--ink-faint); border-top: 1px solid #34495e; padding-top: 1.2rem; }
+.closing a { color: var(--accent-soft); }
+
+/* ============================ TOOLTIP ============================ */
+#tooltip {
+  position: fixed;
+  pointer-events: none;
+  background: rgba(29, 29, 31, 0.95);
+  color: #fff;
+  padding: 0.6rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  line-height: 1.4;
+  max-width: 260px;
+  opacity: 0;
+  transition: opacity 0.12s;
+  z-index: 900;
+  box-shadow: var(--shadow);
+}
+#tooltip.visible { opacity: 1; }
+#tooltip strong { color: #fff; }
+#tooltip .t-sub { color: #b9b4ac; }
+
+/* SVG: ejes y elementos comunes */
+.axis text { font-size: 11px; fill: var(--ink-soft); }
+.axis path, .axis line { stroke: var(--line); }
+.grid line { stroke: var(--line); stroke-dasharray: 2 2; }
+.grid path { stroke: none; }
+.bar-label { font-size: 11px; fill: var(--ink-soft); }
+.null-label { font-size: 10px; fill: var(--ink-faint); }
+
+/* Cobertura demográfica: etiquetas del % ausente, en rojo y destacadas.
+   Halo blanco (paint-order: stroke) para que se lea sobre el rayado o el color. */
+.cover-pct {
+  font-size: 13px;
+  font-weight: 700;
+  fill: var(--accent);
+  stroke: #fff;
+  stroke-width: 3.5px;
+  paint-order: stroke;
+  stroke-linejoin: round;
+}
+.cover-cat { font-size: 12px; fill: var(--ink-soft); font-weight: 600; }
+
+/* Aparición suave de las vistas (respeta reduced-motion) */
+.view, .closing-inner { opacity: 1; }
+@media (prefers-reduced-motion: no-preference) {
+  .view.reveal { opacity: 0; transform: translateY(24px); }
+  .view.reveal.shown {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+}

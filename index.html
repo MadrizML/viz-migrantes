@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Las rutas de los que no llegaron · Migrantes desaparecidos en América</title>
+  <meta name="description" content="Visualización interactiva de los migrantes muertos y desaparecidos en América (2014-2026) a partir de los datos del Missing Migrants Project de la OIM." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><circle cx='8' cy='8' r='6' fill='%23b03a2e'/></svg>" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Barra de progreso de lectura -->
+  <div id="progress-bar" aria-hidden="true"></div>
+
+  <!-- Portada -->
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="kicker">Visualización de datos · Missing Migrants Project (OIM)</p>
+      <h1>Las rutas de los que no llegaron</h1>
+      <p class="subtitle">
+        Migrantes muertos y desaparecidos en América, 2014 a 2026.
+        Cada dato es una persona que salió y no llegó.
+      </p>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num" data-count="7105">7.105</span><span class="stat-label">incidentes registrados</span></div>
+        <div class="stat"><span class="stat-num" data-count="11472">11.472</span><span class="stat-label">muertes y desapariciones</span></div>
+        <div class="stat"><span class="stat-num">4</span><span class="stat-label">subregiones de América</span></div>
+      </div>
+      <div class="hero-questions">
+        <p class="lead">Este proyecto se pregunta cinco cosas que los datos pueden responder:</p>
+        <ol>
+          <li>¿Cómo ha evolucionado el número de muertes y desapariciones entre 2014 y hoy?</li>
+          <li>¿Dónde se concentran geográficamente los incidentes?</li>
+          <li>¿Qué causas predominan, y cómo cambian entre rutas?</li>
+          <li>¿Qué nacionalidades aparecen en cada corredor, y cuándo entra Venezuela en el cuadro?</li>
+          <li>¿Qué dice, y qué no dice, la cobertura por sexo y edad sobre quién queda visible?</li>
+        </ol>
+      </div>
+      <p class="scroll-hint" aria-hidden="true">Desplázate para empezar ↓</p>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- VISTA 1 — MAPA -->
+    <section class="view" id="view-map" aria-labelledby="map-title">
+      <div class="view-intro">
+        <h2 id="map-title">1 · ¿Dónde mueren?</h2>
+        <p>
+          Cada punto es un incidente con personas muertas o desaparecidas. El tamaño codifica
+          cuántas, y el color, la causa. La frontera entre Estados Unidos y México y el desierto que
+          la rodea concentran la mayor parte. El Caribe tiene pocos puntos, pero muy grandes, porque
+          son naufragios. Y al sur aparece un punto que hace diez años casi no existía, el Tapón del
+          Darién, entre Colombia y Panamá.
+        </p>
+        <p class="hint">Arrastra para mover el mapa y usa la rueda para acercarte. Pasa el cursor por un punto para ver el detalle.</p>
+      </div>
+      <div class="view-stage">
+        <div class="controls" id="map-controls">
+          <label for="map-year">Año
+            <input type="range" id="map-year" min="2014" max="2026" value="2026" step="1" />
+            <output id="map-year-out">Todos hasta 2026</output>
+          </label>
+          <div class="btn-group">
+            <button type="button" id="map-all" class="active">Todos los años</button>
+            <button type="button" id="map-darien">Zoom al Darién</button>
+            <button type="button" id="map-reset">Reiniciar vista</button>
+          </div>
+          <div class="legend" id="map-legend" aria-label="Leyenda de causas"></div>
+        </div>
+        <figure>
+          <svg id="map-svg" role="img" aria-label="Mapa de incidentes de migrantes muertos o desaparecidos en América"></svg>
+          <figcaption>Fuente: Missing Migrants Project, OIM. Subconjunto América, 2014-2026 (100% geolocalizado).</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- VISTA 2 — TIEMPO -->
+    <section class="view" id="view-timeline" aria-labelledby="time-title">
+      <div class="view-intro">
+        <h2 id="time-title">2 · ¿Cómo ha crecido?</h2>
+        <p>
+          Los incidentes en América se han más que triplicado entre 2014 y 2024, que es el año
+          récord. El área apilada muestra el peso de cada subregión año a año. Norteamérica sostiene
+          el grueso, pero Centroamérica y el Caribe crecen con fuerza en la última etapa.
+        </p>
+        <p class="note">
+          Nota: 2025 y 2026 son años parciales en el momento de la descarga, por eso aparecen atenuados.
+          La etiqueta de ruta del Darién, además, solo se usa de forma consistente desde 2021, así que
+          en esos primeros años su serie refleja más la falta de registro que la realidad del corredor.
+        </p>
+        <p class="hint">Cambia entre muertes e incidentes, y haz clic en la leyenda para aislar una subregión.</p>
+      </div>
+      <div class="view-stage">
+        <div class="controls" id="timeline-controls">
+          <div class="btn-group">
+            <button type="button" id="tl-toll" class="active">Muertes y desapariciones</button>
+            <button type="button" id="tl-incidents">Incidentes</button>
+          </div>
+          <div class="legend" id="timeline-legend" aria-label="Leyenda de subregiones"></div>
+        </div>
+        <figure>
+          <svg id="timeline-svg" role="img" aria-label="Evolución anual de incidentes y muertes por subregión, 2014-2026"></svg>
+          <figcaption>Fuente: Missing Migrants Project, OIM. Área apilada por subregión.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- VISTA 3 — SANKEY -->
+    <section class="view" id="view-sankey" aria-labelledby="sankey-title">
+      <div class="view-intro">
+        <h2 id="sankey-title">3 · ¿Quién, y por qué ruta?</h2>
+        <p>
+          Este diagrama enlaza el país de origen de las víctimas con la ruta que tomaban y la
+          subregión donde murieron. El ancho de cada flujo es proporcional al número de muertes y
+          desapariciones. México y Guatemala alimentan la frontera norte. Y Venezuela, que hace una
+          década no figuraba, aparece hoy como una nacionalidad propia, sobre todo a través del Darién.
+        </p>
+        <p class="hint">Pasa el cursor por un nodo o un flujo para resaltar su recorrido completo.</p>
+      </div>
+      <div class="view-stage">
+        <figure>
+          <svg id="sankey-svg" role="img" aria-label="Flujos de origen, ruta y subregión de los incidentes"></svg>
+          <figcaption>Fuente: Missing Migrants Project, OIM. Origen → ruta migratoria → subregión del incidente. Solo incidentes con origen y ruta conocidos.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- VISTA 4 — PERFIL Y SESGO -->
+    <section class="view" id="view-profile" aria-labelledby="profile-title">
+      <div class="view-intro">
+        <h2 id="profile-title">4 · ¿Qué sabemos, y qué no?</h2>
+        <p>
+          La causa más frecuente que aparece es "mixta o desconocida", porque muchas muertes ocurren
+          en lugares remotos donde nadie llega a documentar qué pasó. La demografía cuenta algo parecido
+          a través de sus huecos. El sexo apenas se registra en buena parte de los casos, y la edad casi
+          nunca. Esos huecos reflejan cómo funciona el registro sobre el terreno, así que aquí los
+          muestro en lugar de disimularlos.
+        </p>
+        <p class="hint">Filtra por subregión para ver cómo cambian las causas y la cobertura demográfica.</p>
+      </div>
+      <div class="view-stage">
+        <div class="controls" id="profile-controls">
+          <label for="profile-sub">Subregión
+            <select id="profile-sub"></select>
+          </label>
+        </div>
+        <figure class="profile-causes">
+          <h3>Causas de muerte</h3>
+          <svg id="causes-svg" role="img" aria-label="Causas de muerte por número de incidentes"></svg>
+          <figcaption>Número de incidentes por causa. "Mixta o desconocida" refleja el subregistro reconocido por la OIM.</figcaption>
+        </figure>
+
+        <h3 class="demo-heading">Cobertura demográfica: qué se registró y qué no</h3>
+        <div class="demo-grid">
+          <figure>
+            <h4>Cobertura del registro</h4>
+            <svg id="cover-svg" role="img" aria-label="Porcentaje de incidentes con dato registrado frente a sin registrar, por sexo y edad"></svg>
+            <figcaption>De cada categoría, qué porcentaje de incidentes tiene el dato registrado y qué porcentaje no.</figcaption>
+          </figure>
+          <figure>
+            <h4>Personas contabilizadas</h4>
+            <svg id="demo-svg" role="img" aria-label="Número de personas contabilizadas por sexo y edad"></svg>
+            <figcaption>Total de personas registradas en cada categoría dentro de la selección.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIMITACIONES -->
+    <section class="view limitations" id="view-limits" aria-labelledby="limits-title">
+      <div class="view-intro">
+        <h2 id="limits-title">Limitaciones de los datos y de la visualización</h2>
+        <p>
+          Estos datos describen una realidad difícil de medir, así que conviene leerlos con cierta
+          cautela. Las siguientes cuatro advertencias matizan el relato, y algunas forman parte de lo
+          que el propio dataset cuenta.
+        </p>
+        <ul class="limits-list">
+          <li>
+            <strong>Subregistro reconocido.</strong> La propia OIM advierte que muchas muertes nunca
+            llegan a registrarse, sobre todo en selvas y desiertos. Por eso la causa más frecuente es
+            "mixta o desconocida". Las cifras marcan un mínimo y el total real es mayor.
+          </li>
+          <li>
+            <strong>Cobertura demográfica desigual.</strong> El sexo consta solo en una parte de los
+            casos y la edad casi nunca. Esos huecos condicionan cualquier lectura por género o por edad,
+            así que aquí los muestro en lugar de tratarlos como ceros.
+          </li>
+          <li>
+            <strong>La ruta del Darién se etiqueta desde 2021.</strong> El fenómeno venía de antes, pero
+            la etiqueta no, así que su serie temporal mezcla lo que pasaba con el momento en que se
+            empezó a contar de forma sistemática.
+          </li>
+          <li>
+            <strong>Oclusión en el mapa.</strong> En zonas muy densas, como la frontera norte, los
+            incidentes se solapan y los puntos grandes pueden cubrir a los pequeños. El tooltip
+            selecciona el punto más cercano al cursor para mitigarlo, y el zoom ayuda a separarlos, pero
+            en la vista alejada no todos los puntos son distinguibles uno a uno.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="closing">
+    <div class="closing-inner">
+      <h2>Una nota personal</h2>
+      <p>
+        Soy venezolano, migré a España en 2016 por avión. No me tocó la ruta terrestre, pero sí me toca
+        la historia que la rodea. Por eso esta visualización evita el espectáculo y trata cada punto con
+        sobriedad, porque detrás de cada uno hay alguien que tomó la misma decisión que yo, con peor suerte.
+      </p>
+      <p class="attribution">
+        Datos: <em>IOM's Missing Migrants Project</em>, <a href="https://missingmigrants.iom.int/" target="_blank" rel="noopener">missingmigrants.iom.int</a>.
+        Licencia de libre uso con atribución. Construido con D3.js. Código y datos disponibles en el repositorio del proyecto.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Tooltip compartido -->
+  <div id="tooltip" role="tooltip" aria-hidden="true"></div>
+
+  <!-- Librerías vendor -->
+  <script src="lib/d3.v7.min.js"></script>
+  <script src="lib/topojson-client.min.js"></script>
+  <script src="lib/d3-sankey.min.js"></script>
+
+  <!-- Vistas -->
+  <script src="js/map.js"></script>
+  <script src="js/timeline.js"></script>
+  <script src="js/sankey.js"></script>
+  <script src="js/profile.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

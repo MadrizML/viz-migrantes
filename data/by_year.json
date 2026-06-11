@@ -1,0 +1,274 @@
+{
+ "subregions": [
+  "Norteamérica",
+  "Centroamérica",
+  "Sudamérica",
+  "Caribe"
+ ],
+ "partial_years": [
+  2025,
+  2026
+ ],
+ "series": [
+  {
+   "year": 2014,
+   "partial": false,
+   "Norteamérica": {
+    "incidents": 385,
+    "toll": 428
+   },
+   "Centroamérica": {
+    "incidents": 10,
+    "toll": 117
+   },
+   "Sudamérica": {
+    "incidents": 0,
+    "toll": 0
+   },
+   "Caribe": {
+    "incidents": 10,
+    "toll": 73
+   }
+  },
+  {
+   "year": 2015,
+   "partial": false,
+   "Norteamérica": {
+    "incidents": 382,
+    "toll": 515
+   },
+   "Centroamérica": {
+    "incidents": 83,
+    "toll": 152
+   },
+   "Sudamérica": {
+    "incidents": 2,
+    "toll": 2
+   },
+   "Caribe": {
+    "incidents": 9,
+    "toll": 68
+   }
+  },
+  {
+   "year": 2016,
+   "partial": false,
+   "Norteamérica": {
+    "incidents": 478,
+    "toll": 552
+   },
+   "Centroamérica": {
+    "incidents": 146,
+    "toll": 242
+   },
+   "Sudamérica": {
+    "incidents": 11,
+    "toll": 45
+   },
+   "Caribe": {
+    "incidents": 16,
+    "toll": 115
+   }
+  },
+  {
+   "year": 2017,
+   "partial": false,
+   "Norteamérica": {
+    "incidents": 395,
+    "toll": 459
+   },
+   "Centroamérica": {
+    "incidents": 134,
+    "toll": 162
+   },
+   "Sudamérica": {
+    "incidents": 0,
+    "toll": 0
+   },
+   "Caribe": {
+    "incidents": 14,
+    "toll": 170
+   }
+  },
+  {
+   "year": 2018,
+   "partial": false,
+   "Norteamérica": {
+    "incidents": 330,
+    "toll": 390
+   },
+   "Centroamérica": {
+    "incidents": 125,
+    "toll": 146
+   },
+   "Sudamérica": {
+    "incidents": 11,
+    "toll": 30
+   },
+   "Caribe": {
+    "incidents": 7,
+    "toll": 39
+   }
+  },
+  {
+   "year": 2019,
+   "partial": false,
+   "Norteamérica": {
+    "incidents": 314,
+    "toll": 433
+   },
+   "Centroamérica": {
+    "incidents": 163,
+    "toll": 236
+   },
+   "Sudamérica": {
+    "incidents": 14,
+    "toll": 39
+   },
+   "Caribe": {
+    "incidents": 11,
+    "toll": 160
+   }
+  },
+  {
+   "year": 2020,
+   "partial": false,
+   "Norteamérica": {
+    "incidents": 382,
+    "toll": 399
+   },
+   "Centroamérica": {
+    "incidents": 150,
+    "toll": 165
+   },
+   "Sudamérica": {
+    "incidents": 48,
+    "toll": 99
+   },
+   "Caribe": {
+    "incidents": 13,
+    "toll": 163
+   }
+  },
+  {
+   "year": 2021,
+   "partial": false,
+   "Norteamérica": {
+    "incidents": 488,
+    "toll": 680
+   },
+   "Centroamérica": {
+    "incidents": 191,
+    "toll": 324
+   },
+   "Sudamérica": {
+    "incidents": 75,
+    "toll": 151
+   },
+   "Caribe": {
+    "incidents": 25,
+    "toll": 246
+   }
+  },
+  {
+   "year": 2022,
+   "partial": false,
+   "Norteamérica": {
+    "incidents": 481,
+    "toll": 631
+   },
+   "Centroamérica": {
+    "incidents": 282,
+    "toll": 487
+   },
+   "Sudamérica": {
+    "incidents": 35,
+    "toll": 58
+   },
+   "Caribe": {
+    "incidents": 40,
+    "toll": 350
+   }
+  },
+  {
+   "year": 2023,
+   "partial": false,
+   "Norteamérica": {
+    "incidents": 454,
+    "toll": 494
+   },
+   "Centroamérica": {
+    "incidents": 286,
+    "toll": 564
+   },
+   "Sudamérica": {
+    "incidents": 21,
+    "toll": 76
+   },
+   "Caribe": {
+    "incidents": 26,
+    "toll": 279
+   }
+  },
+  {
+   "year": 2024,
+   "partial": false,
+   "Norteamérica": {
+    "incidents": 451,
+    "toll": 512
+   },
+   "Centroamérica": {
+    "incidents": 281,
+    "toll": 413
+   },
+   "Sudamérica": {
+    "incidents": 28,
+    "toll": 45
+   },
+   "Caribe": {
+    "incidents": 21,
+    "toll": 302
+   }
+  },
+  {
+   "year": 2025,
+   "partial": true,
+   "Norteamérica": {
+    "incidents": 122,
+    "toll": 131
+   },
+   "Centroamérica": {
+    "incidents": 73,
+    "toll": 93
+   },
+   "Sudamérica": {
+    "incidents": 29,
+    "toll": 57
+   },
+   "Caribe": {
+    "incidents": 25,
+    "toll": 131
+   }
+  },
+  {
+   "year": 2026,
+   "partial": true,
+   "Norteamérica": {
+    "incidents": 1,
+    "toll": 1
+   },
+   "Centroamérica": {
+    "incidents": 22,
+    "toll": 37
+   },
+   "Sudamérica": {
+    "incidents": 2,
+    "toll": 2
+   },
+   "Caribe": {
+    "incidents": 3,
+    "toll": 9
+   }
+  }
+ ]
+}

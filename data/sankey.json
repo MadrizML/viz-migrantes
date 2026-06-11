@@ -1,0 +1,279 @@
+{
+ "nodes": [
+  {
+   "name": "Guatemala"
+  },
+  {
+   "name": "Frontera EE.UU.-México"
+  },
+  {
+   "name": "Norteamérica"
+  },
+  {
+   "name": "Mexico"
+  },
+  {
+   "name": "Haiti"
+  },
+  {
+   "name": "Caribe hacia EE.UU."
+  },
+  {
+   "name": "Caribe"
+  },
+  {
+   "name": "Haití a Rep. Dominicana"
+  },
+  {
+   "name": "Ecuador"
+  },
+  {
+   "name": "Centroamérica"
+  },
+  {
+   "name": "El Salvador"
+  },
+  {
+   "name": "Cuba"
+  },
+  {
+   "name": "Honduras"
+  },
+  {
+   "name": "Otros orígenes"
+  },
+  {
+   "name": "Rep. Dominicana a Puerto Rico"
+  },
+  {
+   "name": "Tapón del Darién"
+  },
+  {
+   "name": "Sudamérica"
+  },
+  {
+   "name": "Venezuela"
+  },
+  {
+   "name": "Venezuela al Caribe"
+  },
+  {
+   "name": "Ruta atlántica a Canarias"
+  },
+  {
+   "name": "Caribe a Centroamérica"
+  }
+ ],
+ "links": [
+  {
+   "source": 0,
+   "target": 1,
+   "value": 677
+  },
+  {
+   "source": 1,
+   "target": 2,
+   "value": 2596
+  },
+  {
+   "source": 3,
+   "target": 1,
+   "value": 1678
+  },
+  {
+   "source": 4,
+   "target": 5,
+   "value": 45
+  },
+  {
+   "source": 5,
+   "target": 6,
+   "value": 591
+  },
+  {
+   "source": 4,
+   "target": 7,
+   "value": 70
+  },
+  {
+   "source": 7,
+   "target": 6,
+   "value": 70
+  },
+  {
+   "source": 8,
+   "target": 1,
+   "value": 117
+  },
+  {
+   "source": 1,
+   "target": 9,
+   "value": 697
+  },
+  {
+   "source": 10,
+   "target": 1,
+   "value": 177
+  },
+  {
+   "source": 11,
+   "target": 5,
+   "value": 505
+  },
+  {
+   "source": 12,
+   "target": 1,
+   "value": 275
+  },
+  {
+   "source": 13,
+   "target": 1,
+   "value": 265
+  },
+  {
+   "source": 11,
+   "target": 14,
+   "value": 3
+  },
+  {
+   "source": 14,
+   "target": 6,
+   "value": 414
+  },
+  {
+   "source": 11,
+   "target": 15,
+   "value": 47
+  },
+  {
+   "source": 15,
+   "target": 16,
+   "value": 70
+  },
+  {
+   "source": 13,
+   "target": 15,
+   "value": 107
+  },
+  {
+   "source": 15,
+   "target": 9,
+   "value": 239
+  },
+  {
+   "source": 17,
+   "target": 18,
+   "value": 194
+  },
+  {
+   "source": 18,
+   "target": 6,
+   "value": 161
+  },
+  {
+   "source": 11,
+   "target": 1,
+   "value": 49
+  },
+  {
+   "source": 1,
+   "target": 6,
+   "value": 6
+  },
+  {
+   "source": 13,
+   "target": 5,
+   "value": 82
+  },
+  {
+   "source": 13,
+   "target": 14,
+   "value": 376
+  },
+  {
+   "source": 4,
+   "target": 1,
+   "value": 20
+  },
+  {
+   "source": 17,
+   "target": 1,
+   "value": 41
+  },
+  {
+   "source": 4,
+   "target": 15,
+   "value": 43
+  },
+  {
+   "source": 18,
+   "target": 16,
+   "value": 33
+  },
+  {
+   "source": 5,
+   "target": 2,
+   "value": 46
+  },
+  {
+   "source": 8,
+   "target": 5,
+   "value": 5
+  },
+  {
+   "source": 13,
+   "target": 19,
+   "value": 96
+  },
+  {
+   "source": 19,
+   "target": 6,
+   "value": 90
+  },
+  {
+   "source": 19,
+   "target": 9,
+   "value": 6
+  },
+  {
+   "source": 17,
+   "target": 15,
+   "value": 104
+  },
+  {
+   "source": 4,
+   "target": 14,
+   "value": 35
+  },
+  {
+   "source": 8,
+   "target": 15,
+   "value": 12
+  },
+  {
+   "source": 8,
+   "target": 20,
+   "value": 17
+  },
+  {
+   "source": 20,
+   "target": 6,
+   "value": 17
+  },
+  {
+   "source": 11,
+   "target": 20,
+   "value": 9
+  },
+  {
+   "source": 20,
+   "target": 9,
+   "value": 9
+  },
+  {
+   "source": 15,
+   "target": 6,
+   "value": 4
+  }
+ ]
+}

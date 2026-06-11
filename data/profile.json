@@ -1,0 +1,155 @@
+{
+ "subregions": [
+  "Todas",
+  "Norteamérica",
+  "Centroamérica",
+  "Sudamérica",
+  "Caribe"
+ ],
+ "causes": [
+  "Ahogamiento",
+  "Condiciones ambientales extremas",
+  "Accidente de transporte",
+  "Violencia",
+  "Enfermedad o falta de atención",
+  "Muerte accidental",
+  "Mixta o desconocida"
+ ],
+ "by_subregion": {
+  "Todas": {
+   "incidents": 7105,
+   "toll": 11472,
+   "causes": {
+    "Ahogamiento": 1682,
+    "Condiciones ambientales extremas": 1536,
+    "Accidente de transporte": 644,
+    "Violencia": 445,
+    "Enfermedad o falta de atención": 247,
+    "Muerte accidental": 174,
+    "Mixta o desconocida": 2377
+   },
+   "demography": {
+    "mujeres": {
+     "sum": 1473,
+     "null_pct": 81.0
+    },
+    "hombres": {
+     "sum": 5891,
+     "null_pct": 28.2
+    },
+    "menores": {
+     "sum": 514,
+     "null_pct": 94.9
+    }
+   }
+  },
+  "Norteamérica": {
+   "incidents": 4663,
+   "toll": 5625,
+   "causes": {
+    "Ahogamiento": 693,
+    "Condiciones ambientales extremas": 1377,
+    "Accidente de transporte": 177,
+    "Violencia": 100,
+    "Enfermedad o falta de atención": 96,
+    "Muerte accidental": 105,
+    "Mixta o desconocida": 2115
+   },
+   "demography": {
+    "mujeres": {
+     "sum": 687,
+     "null_pct": 81.7
+    },
+    "hombres": {
+     "sum": 3374,
+     "null_pct": 29.1
+    },
+    "menores": {
+     "sum": 111,
+     "null_pct": 97.9
+    }
+   }
+  },
+  "Centroamérica": {
+   "incidents": 1946,
+   "toll": 3138,
+   "causes": {
+    "Ahogamiento": 791,
+    "Condiciones ambientales extremas": 100,
+    "Accidente de transporte": 421,
+    "Violencia": 247,
+    "Enfermedad o falta de atención": 115,
+    "Muerte accidental": 57,
+    "Mixta o desconocida": 215
+   },
+   "demography": {
+    "mujeres": {
+     "sum": 440,
+     "null_pct": 83.7
+    },
+    "hombres": {
+     "sum": 1805,
+     "null_pct": 23.9
+    },
+    "menores": {
+     "sum": 272,
+     "null_pct": 89.8
+    }
+   }
+  },
+  "Sudamérica": {
+   "incidents": 276,
+   "toll": 604,
+   "causes": {
+    "Ahogamiento": 35,
+    "Condiciones ambientales extremas": 49,
+    "Accidente de transporte": 38,
+    "Violencia": 87,
+    "Enfermedad o falta de atención": 32,
+    "Muerte accidental": 8,
+    "Mixta o desconocida": 27
+   },
+   "demography": {
+    "mujeres": {
+     "sum": 113,
+     "null_pct": 67.8
+    },
+    "hombres": {
+     "sum": 253,
+     "null_pct": 31.9
+    },
+    "menores": {
+     "sum": 73,
+     "null_pct": 86.6
+    }
+   }
+  },
+  "Caribe": {
+   "incidents": 220,
+   "toll": 2105,
+   "causes": {
+    "Ahogamiento": 163,
+    "Condiciones ambientales extremas": 10,
+    "Accidente de transporte": 8,
+    "Violencia": 11,
+    "Enfermedad o falta de atención": 4,
+    "Muerte accidental": 4,
+    "Mixta o desconocida": 20
+   },
+   "demography": {
+    "mujeres": {
+     "sum": 233,
+     "null_pct": 60.5
+    },
+    "hombres": {
+     "sum": 459,
+     "null_pct": 41.4
+    },
+    "menores": {
+     "sum": 58,
+     "null_pct": 85.5
+    }
+   }
+  }
+ }
+}
